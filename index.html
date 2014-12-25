@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="AutosMart" data-ng-init="contentPath='content/'">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta charset="UTF-8" />
+		<title>A Web</title>
+		
+		<script type="text/javascript" src="js/lib/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js/lib/angular.js"></script>
+		<script type="text/javascript" src="js/autosMart.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul data-ng-controller="MenuController">
+					<li data-ng-repeat="menu in menus"><a href="{{contentPath + menu.uri}}" data-ng-bind="menu.content"></a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+		</main>
+		<footer>
+		</footer>
+	</body>
+</html>
