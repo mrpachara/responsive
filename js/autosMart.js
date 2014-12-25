@@ -1,16 +1,23 @@
 var autosMart = angular.module('AutosMart', []);
 
-(function(window, document, autosMart){
+(function(document, autosMart){
 	'use strict';
-	
-	console.log(autosMart);
-	
-	autosMart.controller('MenuController', ['$rootScope', '$scope', '$http', function($rootScope, $scope, $http){
-		console.log('xxx');
+
+	autosMart.controller('MenuController', ['$scope', '$http', function($scope, $http){
 		$http.get('resources/menu.json')
 			.success(function(data, status, headers, config) {
 				$scope.menus = data;
+				$scope.searchTerm = '';
 			})
 		;
 	}]);
-})(window, document, autosMart);
+
+	/*
+	var searchData = {
+		'term': '1234'
+	};
+	autosMart.controller('SearchController', ['$scope', function($scope){
+		$scope.data = searchData;
+	}]);
+	*/
+})(window.document, autosMart);
