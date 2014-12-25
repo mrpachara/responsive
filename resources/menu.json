@@ -10,5 +10,9 @@
 	{
 		"content": "Test",
 		"uri": "test.html"
+	},
+	{
+		"content": "Xxx",
+		"uri": "xxx.html"
 	}
 ]
