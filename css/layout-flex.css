@@ -1,25 +1,38 @@
 @charset "UTF-8";
 
-#ly-header {
+#ly-navigation {
 	display: flex;
+	position: fixed;
+
 	flex-direction: row;
+
+	box-sizing: border-box;
+	width: 100%;
 }
 
-#ly-header>.ly-element:last-child {
+#ly-navigation>.ly-element:last-child {
 	margin-left: auto;
 }
 
+#ly-title {
+	background-color: black;
+
+	height: 100px;
+}
 /* =====================
 Component
 ===================== */
 #cp-menu {
 	margin: 0px;
 	padding: 0px;
+	padding-right: 3em;
 
 	list-style: none;
 
 	display: flex;
 	flex-direction: row;
+
+	text-transform: uppercase;
 }
 
 #cp-menu a,
@@ -28,8 +41,18 @@ Component
 #cp-menu a:hover,
 #cp-menu a:active {
 	color: inherit;
-	font-weight: bold;
+	font-weight: normal;
 	opacity: 0.75;
-	
+
 	text-decoration: none;
+}
+
+#cp-menu a:hover,
+#cp-menu>*.st-active {
+	opacity: 1.00;
+}
+
+#cp-menu a {
+	display: block;
+	padding: 1em;
 }

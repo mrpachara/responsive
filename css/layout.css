@@ -8,7 +8,7 @@ body {
 	padding: 0px;
 	margin: 0px;
 
-	background-color: gray;
+	font-size: 14px;
 }
 
 *[id|='ly'],
