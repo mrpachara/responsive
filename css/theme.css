@@ -1,13 +1,74 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 html,
 body {
 	font-family: sans-serif;
-	background-color: gray;
+	background-color: white;
 }
+
 #ly-navigation {
 	color: white;
+	background-color: transparent;
 }
+
+html.st-float #ly-navigation {
+	color: black;
+	background-color: white;
+
+	box-shadow: 0px 1px 3px 1px gray;
+}
+
+#ly-title {
+	color: white;
+}
+
+#ly-title .el-content {
+	opacity: 1.00;
+}
+
+#cp-menu {
+	text-transform: uppercase;
+}
+
 #cp-menu a {
-	transition: all 0.2s linear
+	color: inherit;
+	font-weight: normal;
+	opacity: 0.75;
+}
+
+#cp-menu a:hover,
+#cp-menu>*.st-active {
+	opacity: 1.00;
+}
+
+@media (max-width: 800px) {
+	#ly-navigation {
+		color: black;
+		background-color: white;
+
+		box-shadow: 0px 1px 3px 1px gray;
+	}
+
+	#cp-menu>* {
+		border-bottom: 1px dashed gray;
+	}
+}
+
+/* =====================
+Animation
+===================== */
+#ly-navigation {
+	transition: padding 0.2s linear, background-color 0.2s linear;
+}
+
+#ly-navigation .el-logo {
+	transition: visibility 0.2s linear;
+}
+
+#cp-menu {
+	transition: visibility 0.2s linear, height 0.2s linear;
+}
+
+#cp-menu a {
+	transition: color 0.2s linear, opacity 0.2s linear;
 }

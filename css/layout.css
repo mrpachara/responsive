@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 html,
 body {
@@ -16,4 +16,84 @@ body {
 *[class*=' ly-'] {
 	margin: 0px;
 	padding: 0px;
+}
+
+#ly-navigation {
+	box-sizing: border-box;
+	width: 100%;
+
+	min-height: 2em;
+
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+	z-index: 999;
+}
+
+#ly-navigation .cmd-toggle {
+	display: none;
+}
+
+#ly-navigation .el-logo {
+	visibility: hidden;
+}
+
+html.st-float #ly-navigation {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+html.st-float #ly-navigation .el-logo {
+	visibility: visible;
+}
+
+#ly-title {
+	background-color: black;
+
+	height: 100%;
+
+	padding-top: 100px;
+}
+
+#ly-title .el-content {
+	margin-left: 200px;
+}
+
+/* =====================
+Component
+===================== */
+#cp-menu {
+	margin: 0px;
+	padding: 0px;
+	padding-right: 4em;
+
+	list-style: none;
+}
+
+#cp-menu a,
+#cp-menu a:link,
+#cp-menu a:visited,
+#cp-menu a:hover,
+#cp-menu a:active {
+	text-decoration: none;
+}
+
+#cp-menu a {
+	display: block;
+	padding: 1em;
+}
+
+@media (max-width: 800px) {
+	#ly-navigation .cmd-toggle {
+		display: initial;
+	}
+
+	#ly-navigation {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+
+	#ly-navigation .el-logo {
+		visibility: visible;
+	}
 }

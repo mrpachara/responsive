@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 #ly-navigation {
 	display: flex;
@@ -14,45 +14,40 @@
 	margin-left: auto;
 }
 
-#ly-title {
-	background-color: black;
-
-	height: 100px;
-}
 /* =====================
 Component
 ===================== */
 #cp-menu {
-	margin: 0px;
-	padding: 0px;
-	padding-right: 3em;
-
-	list-style: none;
-
 	display: flex;
 	flex-direction: row;
 
-	text-transform: uppercase;
 }
 
-#cp-menu a,
-#cp-menu a:link,
-#cp-menu a:visited,
-#cp-menu a:hover,
-#cp-menu a:active {
-	color: inherit;
-	font-weight: normal;
-	opacity: 0.75;
-
-	text-decoration: none;
-}
-
-#cp-menu a:hover,
-#cp-menu>*.st-active {
-	opacity: 1.00;
-}
-
-#cp-menu a {
+#cp-menu>* {
 	display: block;
-	padding: 1em;
+
+	flex: 0 0 auto;
+}
+
+@media (max-width: 800px) {
+
+	#ly-navigation>.ly-element:last-child {
+		margin-left: initial;
+		flex: 1;
+	}
+
+	#cp-menu {
+		visibility: hidden;
+		height: 0px;
+		overflow-y: hidden;
+		overflow-x: hidden;
+
+		flex-direction: column;
+	}
+
+	#cp-menu.st-active {
+		visibility: visible;
+
+		height: 250px;
+	}
 }
