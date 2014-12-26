@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+#ly-header {
+	display: flex;
+	flex-direction: row;
+}
+
+#ly-header>.ly-element:last-child {
+	margin-left: auto;
+}
+
+/* =====================
+Component
+===================== */
+#cp-menu {
+	margin: 0px;
+	padding: 0px;
+
+	list-style: none;
+
+	display: flex;
+	flex-direction: row;
+}
+
+#cp-menu a,
+#cp-menu a:link,
+#cp-menu a:visited,
+#cp-menu a:hover,
+#cp-menu a:active {
+	color: inherit;
+	font-weight: bold;
+	opacity: 0.75;
+	
+	text-decoration: none;
+}
