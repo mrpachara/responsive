@@ -15,7 +15,8 @@ html.st-float #ly-navigation {
 	color: black;
 	background-color: white;
 
-	box-shadow: 0px 1px 3px 1px gray;
+	/*box-shadow: 0px 1px 3px 1px gray;*/
+	box-shadow: 0 0 4px rgba(0,0,0,.2);
 }
 
 #ly-title {
@@ -118,7 +119,8 @@ Component
 	}
 
 	html.st-overlap #ly-navigation {
-		box-shadow: 0px 1px 3px 1px gray;
+		/*box-shadow: 0px 1px 3px 1px gray;*/
+		box-shadow: 0 0 4px rgba(0,0,0,.2);
 	}
 
 	#ly-content article p {

@@ -85,6 +85,7 @@ var autosMart = angular.module('AutosMart', []);
 					$('body>*', doc).each(function(){
 						var newElement = document.importNode(this, true);
 						$lyContent.append(newElement);
+						$(window).animate({'scrollTop': 0}, 'slow');
 					});
 					/*
 					angular.element(document).injector().invoke(function($compile) {
@@ -92,6 +93,10 @@ var autosMart = angular.module('AutosMart', []);
 					*/
 				})
 			;
-		})
+		});
+
+		$('#cp-command').on('touchstart.global', 'button', function(ev){
+			//ev.preventDefault();
+		});
 	});
 })(window.document, window.jQuery, window.angular, autosMart);
