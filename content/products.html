@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Product</title>
+	</head>
+	<body>
+		<article id="page-products">
+			<style type="text/css" scoped="scoped">
+#page-products article{
+	display: flex;
+	flex-direction: row;
+
+	margin-bottom: 64px;
+}
+
+#page-products article>*.product-image {
+	flex: 0 0 auto;
+}
+
+#page-products article>*.product-detail {
+	flex: 1 1 auto;
+}
+
+@media (min-width: 801px) {
+	#page-products article>*.product-image {
+		padding-top: 2em;
+	}
+
+	#page-products article:nth-child(even){
+		flex-direction: row-reverse;
+	}
+
+	#page-products article:nth-child(odd)>*.product-detail {
+		margin-left: 4em;
+	}
+
+	#page-products article:nth-child(even)>*.product-detail {
+		margin-right: 4em;
+	}
+}
+
+@media (max-width: 800px) {
+	#page-products article {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#page-products article>*.product-detail {
+		width: 100%;
+	}
+}
+			</style>
+			<h1>Products</h1>
+			<article>
+				<div class="product-image">
+					<img src="image/products/vp400.png" />
+				</div>
+				<div class="product-detail">
+					<header>
+						<h2>A400</h2>
+						<h2>OBDll/GPRS MODEM WITH INTEGRATED GPS</h2>
+					</header>
+					<p>A400 is the most versatile and economical diagnostic device available today for communicating vital vehicle information to owners via ubiquitous GSM/GPRS networks. With an integrated GPS engine, embedded cellular, PCS and GPS antennas, and integrated OBDII interface, VP400 is the ultimate solution for fleet managers in need of monitoring location, speed, and hundreds of diagnostic codes available on the OBD port of vehicles. With an integrated J1962 connector, an extremely compact design powered through the OBD port, and low power consumption,</p>
+					<p>VP400 can be installed in matter of seconds which substantially reduces the high cost of installation.</p>
+				</div>
+			</article>
+			<article>
+				<div class="product-image">
+					<img src="image/products/vp400.png" />
+				</div>
+				<div class="product-detail">
+					<header>
+						<h2>A400</h2>
+						<h2>OBDll/GPRS MODEM WITH INTEGRATED GPS</h2>
+					</header>
+					<p>A400 is the most versatile and economical diagnostic device available today for communicating vital vehicle information to owners via ubiquitous GSM/GPRS networks. With an integrated GPS engine, embedded cellular, PCS and GPS antennas, and integrated OBDII interface, VP400 is the ultimate solution for fleet managers in need of monitoring location, speed, and hundreds of diagnostic codes available on the OBD port of vehicles. With an integrated J1962 connector, an extremely compact design powered through the OBD port, and low power consumption,</p>
+					<p>VP400 can be installed in matter of seconds which substantially reduces the high cost of installation.</p>
+				</div>
+			</article>
+			<article>
+				<div class="product-image">
+					<img src="image/products/vp400.png" />
+				</div>
+				<div class="product-detail">
+					<header>
+						<h2>A400</h2>
+						<h2>OBDll/GPRS MODEM WITH INTEGRATED GPS</h2>
+					</header>
+					<p>A400 is the most versatile and economical diagnostic device available today for communicating vital vehicle information to owners via ubiquitous GSM/GPRS networks. With an integrated GPS engine, embedded cellular, PCS and GPS antennas, and integrated OBDII interface, VP400 is the ultimate solution for fleet managers in need of monitoring location, speed, and hundreds of diagnostic codes available on the OBD port of vehicles. With an integrated J1962 connector, an extremely compact design powered through the OBD port, and low power consumption,</p>
+					<p>VP400 can be installed in matter of seconds which substantially reduces the high cost of installation.</p>
+				</div>
+			</article>
+		</article>
+	</body>
+</html>

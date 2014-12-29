@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+#ly-title article {
+	background-image: url('../image/world.png');
+	background-repeat: no-repeat;
+}
+
+@media (max-width: 800px) {
+	#ly-title article {
+		background-position: center 300px;
+	}
+}

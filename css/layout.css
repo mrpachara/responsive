@@ -11,6 +11,23 @@ body {
 	font-size: 14px;
 }
 
+body {
+	overflow-y: scroll;
+}
+
+main {
+	display: block;
+}
+
+article {
+	display: block;
+}
+
+style,
+script {
+	display: none;
+}
+
 *[id|='ly'],
 *[class^='ly-'],
 *[class*=' ly-'] {
@@ -19,10 +36,13 @@ body {
 }
 
 #ly-navigation {
+	position: fixed;
+	top: 0px;
+
 	box-sizing: border-box;
 	width: 100%;
 
-	min-height: 2em;
+	min-height: 3.3em;
 
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -30,12 +50,8 @@ body {
 	z-index: 999;
 }
 
-#ly-navigation .cmd-toggle {
-	display: none;
-}
-
 #ly-navigation .el-logo {
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 
 html.st-float #ly-navigation {
@@ -48,20 +64,78 @@ html.st-float #ly-navigation .el-logo {
 }
 
 #ly-title {
-	background-color: black;
-
+	box-sizing: border-box;
 	height: 100%;
 
-	padding-top: 100px;
+	padding-top: 150px;
+
+	overflow: hidden;
 }
 
-#ly-title .el-content {
-	margin-left: 200px;
+html:not(.st-show-title) #ly-title {
+	display: none !important;
 }
 
+#ly-title>*:last-child {
+	width: 100%;
+	height: 0px;
+}
+
+#ly-content {
+	font-size: 16px;
+}
+
+html:not(.st-show-title) #ly-content {
+	padding-top: 150px;
+}
+
+#ly-footer {
+	height: 64px;
+}
 /* =====================
 Component
 ===================== */
+#cp-header-logo {
+	display: inline-block;
+
+	font-weight: bold;
+	font-size: xx-large;
+
+	padding-top: 0.15em;
+	padding-left: 1em;
+}
+
+#cp-command {
+	/*display: none;*/
+
+	height: 3.3em;
+
+	padding-right: 0.5em;
+
+	white-space: nowrap;
+}
+
+#cp-command>* {
+	display: inline-block;
+
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+#cp-command button {
+	color: inherit;
+	font-size: inherit;
+	font-weight: bold;
+}
+
+#cp-command .cmd-toggle {
+	font-size: x-large;
+}
+
+#cp-command .cmd-toggle {
+	display: none;
+}
+
 #cp-menu {
 	margin: 0px;
 	padding: 0px;
@@ -83,9 +157,54 @@ Component
 	padding: 1em;
 }
 
+#cp-title-content {
+	margin-left: 300px;
+}
+
+#cp-title-fade {
+	height: 150px;
+	width: 100%;
+}
+
+#cp-copyright {
+	display: inline-block;
+
+	margin-top: 0.5em;
+	margin-left: 4em;
+}
+
+#cp-social {
+	list-style: none;
+
+	padding: 0px;
+	margin: 0px;
+
+	padding-right: 1em;
+}
+
+#cp-social .cp-social-item {
+	padding: 1em;
+}
+
+@media (min-width: 801px) {
+	html.st-float #cp-command {
+		font-size: smaller !important;
+		height: 16px;
+	}
+
+	#ly-content {
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+
+	#cp-title-content {
+		white-space: nowrap;
+	}
+}
+
 @media (max-width: 800px) {
 	#ly-navigation .cmd-toggle {
-		display: initial;
+		display: inline-block;
 	}
 
 	#ly-navigation {
@@ -95,5 +214,30 @@ Component
 
 	#ly-navigation .el-logo {
 		visibility: visible;
+	}
+
+	#ly-title {
+		padding-top: 50px;
+	}
+
+	html:not(.st-show-title) #ly-content {
+		padding-top: 50px;
+	}
+
+	#cp-command .cmd-toggle {
+		display: inline-block;
+	}
+
+	#cp-title-content {
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+
+	#cp-copyright {
+		margin-left: 1em;
+	}
+
+	#cp-social {
+		padding-right: 1em;
 	}
 }

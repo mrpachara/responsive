@@ -1,18 +1,23 @@
 [
 	{
+		"content": "Home",
+		"uri": "home.html",
+		"showTitle": true
+	},
+	{
 		"content": "About",
 		"uri": "about.html"
 	},
 	{
-		"content": "Product",
-		"uri": "product.html"
+		"content": "Products",
+		"uri": "products.html"
 	},
 	{
-		"content": "Test",
-		"uri": "test.html"
+		"content": "Why us",
+		"uri": "why_us.html"
 	},
 	{
-		"content": "Xxx",
-		"uri": "xxx.html"
+		"content": "Contact",
+		"uri": "contact.html"
 	}
 ]

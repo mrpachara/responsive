@@ -13,191 +13,56 @@
 		<script type="text/javascript" src="js/layout.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<link rel="stylesheet" type="text/css" href="css/theme.css" />
 	</head>
 	<body>
 		<header id="ly-navigation">
 			<div class="ly-element">
-				<span class="el-logo">Logo</span>
+				<span id="cp-header-logo" class="el-logo">auto<span style="font-size: small;">s</span>Mart</span>
 			</div>
 			<nav class="ly-element">
-				<div style="text-align: right;">
-					<button type="button" value="cp-menu" class="cmd-toggle">=</button>
+				<div id="cp-command" data-ng-controller="CommandController">
+					<button type="button" data-ng-click="toggleLang()" value="{{data.lang}}" class="cmd-lang"><span data-ng-class="{'st-active': data.lang == 'eng'}">ENG</span> | <span data-ng-class="{'st-active': data.lang == 'th'}">TH</span></button>
+					<button type="button" value="cp-menu" class="cmd-toggle">&equiv;</button>
 				</div>
 				<ul id="cp-menu" data-ng-controller="MenuController">
-					<li data-ng-repeat="menu in menus">
-						<a href="{{contentPath + menu.uri}}" data-ng-bind="menu.content"></a>
+					<li data-ng-repeat="menu in menus" class="cp-menu-item">
+						<a href="{{contentPath + menu.uri}}" data-show-title="{{menu.showTitle}}" data-ng-bind="menu.content"></a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 		<div id="ly-title">
-			<div class="el-content">
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
-				<span>abcd</span>
-				<br />
-				<span>efgh</span>
-				<br />
-				<span>ijkl</span>
-				<br />
+			<article>
+				<div id="cp-title-content">
+					<h2>Know where're your assets, excellent option for your<br />customer  <span style="font-size: x-large;">&ldquo;</span>minimize invest with great return<span style="font-size: x-large;">&rdquo;</span></h2>
+					<p style="display: flex; flex-direction: column; font-size: large; height: 7em; justify-content: space-between;">
+						<span style="padding-left: 2em;"><span style="font-size: x-large;">&ldquo;</span>Pay as your drive<span style="font-size: x-large;">&rdquo;</span></span>
+						<span style="padding-left: 4em;"><span style="font-size: x-large;">&ldquo;</span>Buy here pay here<span style="font-size: x-large;">&rdquo;</span></span>
+						<span style="padding-left: 6em;"><span style="font-size: x-large;">&ldquo;</span>Retail floor planning<span style="font-size: x-large;">&rdquo;</span></span>
+						<span style="padding-left: 8em;"><span style="font-size: x-large;">&ldquo;</span>Simply install<span style="font-size: x-large;">&rdquo;</span></span>
+					</p>
+				</div>
+			</article>
+			<div>
+				<div id="cp-title-fade"></div>
 			</div>
 		</div>
-		<main>
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-			<span>abcd</span>
-			<br />
-		</main>
-		<footer>
+		<main id="ly-content"></main>
+		<footer id="ly-footer">
+			<span id="cp-copyright">&copy; 2014 Company Name</span>
+			<ul id="cp-social">
+				<li class="cp-social-item">
+					<a href="https://www.facebook.com"><img src="image/facebook-7-24.png" /></a>
+				</li>
+				<li class="cp-social-item">
+					<a href="https://twitter.com"><img src="image/twitter-4-24.png" /></a>
+				</li>
+				<li class="cp-social-item">
+					<a href="https://www.youtube.com"><img src="image/youtube-4-24.png" /></a>
+				</li>
+			</ul>
 		</footer>
 	</body>
 </html>

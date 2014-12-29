@@ -1,8 +1,13 @@
 @charset 'UTF-8';
 
+html,
+body {
+	display: flex;
+	flex-direction: column;
+}
+
 #ly-navigation {
 	display: flex;
-	position: fixed;
 
 	flex-direction: row;
 
@@ -14,9 +19,58 @@
 	margin-left: auto;
 }
 
+#ly-title {
+	flex: 0 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#ly-title article {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+
+	overflow: hidden;
+}
+
+#ly-title>*:last-child {
+	flex: 0 0 auto;
+	z-index: 99;
+
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+#ly-content {
+	flex: 0 0 auto;
+}
+
+#ly-footer {
+	margin-top: auto;
+
+	flex: 0 0 auto;
+
+	display: flex;
+	flex-direction: row;
+}
+
+#ly-footer>*:last-child {
+	margin-left: auto;
+}
+
 /* =====================
 Component
 ===================== */
+#cp-command {
+	display: flex !important;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+
 #cp-menu {
 	display: flex;
 	flex-direction: row;
@@ -29,11 +83,29 @@ Component
 	flex: 0 0 auto;
 }
 
-@media (max-width: 800px) {
+#cp-title-content {
+	flex: 1 1 auto;
+}
 
+#cp-title-fade {
+	flex: 0 0 auto;
+}
+
+#cp-social {
+	display: flex;
+	flex-direction: row;
+
+	align-items: center;
+}
+
+@media (max-width: 800px) {
 	#ly-navigation>.ly-element:last-child {
-		margin-left: initial;
+		margin-left: 0px;
 		flex: 1;
+	}
+
+	#ly-title article {
+		flex-direction: column;
 	}
 
 	#cp-menu {
