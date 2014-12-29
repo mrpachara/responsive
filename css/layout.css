@@ -126,6 +126,8 @@ Component
 	color: inherit;
 	font-size: inherit;
 	font-weight: bold;
+
+	height: 100%;
 }
 
 #cp-command .cmd-toggle {

@@ -67,6 +67,8 @@ Component
 	background-color: transparent;
 	border: 0px solid transparent;
 	outline: none;
+
+	cursor: pointer;
 }
 
 #cp-command .cmd-lang>* {
