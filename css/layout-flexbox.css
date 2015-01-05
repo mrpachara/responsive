@@ -2,17 +2,19 @@
 
 html,
 body {
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: column;
 	flex-direction: column;
 }
 
 #ly-navigation {
+	display: -webkit-flex;
 	display: flex;
 
+	-webkit-flex-direction: row;
 	flex-direction: row;
-
-	box-sizing: border-box;
-	width: 100%;
 }
 
 #ly-navigation>.ly-element:last-child {
@@ -20,40 +22,63 @@ body {
 }
 
 #ly-title {
+	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
 
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: column;
 	flex-direction: column;
+
+	-webkit-align-items: center;
 	align-items: center;
 }
 
 #ly-title article {
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: column;
 	flex-direction: column;
+
+	-webkit-flex: 1 1 auto;
 	flex: 1 1 auto;
 
 	overflow: hidden;
 }
 
 #ly-title>*:last-child {
+	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
+
 	z-index: 99;
 
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: row;
 	flex-direction: row;
+
+	-webkit-align-items: flex-end;
 	align-items: flex-end;
 }
 
 #ly-content {
+	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
 }
 
 #ly-footer {
 	margin-top: auto;
 
+	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
 
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: row;
 	flex-direction: row;
 }
 
@@ -65,46 +90,65 @@ body {
 Component
 ===================== */
 #cp-command {
+	display: -webkit-flex !important;
 	display: flex !important;
+
+	-webkit-flex-direction: row;
 	flex-direction: row;
+
+	-webkit-align-items: center;
 	align-items: center;
+
+	-webkit-justify-content: flex-end;
 	justify-content: flex-end;
 }
 
 #cp-menu {
+	display: -webkit-flex;
 	display: flex;
-	flex-direction: row;
 
+	-webkit-flex-direction: row;
+	flex-direction: row;
 }
 
-#cp-menu>* {
+#cp-menu>li {
 	display: block;
 
+	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
 }
 
 #cp-title-content {
+	-webkit-flex: 1 1 auto;
 	flex: 1 1 auto;
 }
 
 #cp-title-fade {
+	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
 }
 
 #cp-social {
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: row;
 	flex-direction: row;
 
+	-webkit-align-items: center;
 	align-items: center;
 }
 
 @media (max-width: 800px) {
 	#ly-navigation>.ly-element:last-child {
 		margin-left: 0px;
-		flex: 1;
+
+		-webkit-flex: 1 1 auto;
+		flex: 1 1 auto;
 	}
 
 	#ly-title article {
+		-webkit-flex-direction: column;
 		flex-direction: column;
 	}
 
@@ -114,6 +158,7 @@ Component
 		overflow-y: hidden;
 		overflow-x: hidden;
 
+		-webkit-flex-direction: column;
 		flex-direction: column;
 	}
 

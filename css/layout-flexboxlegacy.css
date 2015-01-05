@@ -1,0 +1,222 @@
+@charset 'UTF-8';
+
+*.ly-flexboxlegacy-flexible {
+	/* flex: 1 1 auto; */
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+}
+
+html,
+body {
+	/* display: flex; */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+
+	/* flex-direcition: column */
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+}
+
+#ly-navigation {
+	/* display: flex; */
+	display: -webkit-box;
+	display: -moz-box;
+
+	/* flex-direciton: row; */
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+}
+
+/* FIX: when use "poistion: fixed;" firefox will change display to "display: block;" */
+#ly-navigation.ly-nofixed {
+	position: relative;
+}
+
+#ly-navigation>.ly-element:last-child {
+	/* margin-left: auto; */
+	/* javascript insert layout */
+
+	/* FIX: firefox will do box-orient same as parent element */
+	display: -moz-box;
+	-moz-box-orient: vertical;
+}
+
+#ly-title {
+	/* flex: 0 0 auto; */
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+
+	/* display: flex; */
+	display: -webkit-box;
+	display: -moz-box;
+
+	/* flex-direction: column; */
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+
+	/* align-items: center; */
+	-webkit-box-align: center;
+	-moz-box-align: center;
+}
+
+#ly-title article {
+	/* display: flex; */
+	display: -webkit-box;
+	display: -moz-box;
+
+	/* flex-direction: column; */
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+
+	/* flex: 1 1 auto; */
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+
+	overflow: hidden;
+}
+
+#ly-title>*:last-child {
+	/* flex: 0 0 auto; */
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+
+	z-index: 99;
+
+	/* display: flex; */
+	display: -webkit-box;
+	display: -moz-box;
+
+	/* flex-direction: row; */
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+
+	/* align-items: flex-end; */
+	-webkit-box-align: end;
+	-moz-box-align: end;
+}
+
+#ly-content {
+	/* flex: 0 0 auto; */
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+}
+
+#ly-footer {
+	/* margin-top: auto; */
+	/* javascript insert layout */
+
+	/* flex: 0 0 auto; */
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+
+	/* display: flex; */
+	display: -webkit-box;
+	display: -moz-box;
+
+	/* flex-direction: row; */
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+}
+
+#ly-footer>*:last-child {
+	/* margin-left: auto; */
+	/* javascript insert layout */
+}
+
+/* =====================
+Component
+===================== */
+#cp-command {
+	/* display: flex !important; */
+	display: -webkit-box !important;
+	display: -moz-box !important;
+
+	/* flex-direction: row; */
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+
+	/* align-items: center; */
+	-webkit-box-align: center;
+	-moz-box-align: center;
+
+	/* justify-content: flex-end; */
+	-webkit-box-pack: end;
+	-moz-box-pack: end;
+}
+
+#cp-menu {
+	/* display: flex; */
+	display: -webkit-box;
+	display: -moz-box;
+
+	/* flex-direction: row; */
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+}
+
+#cp-menu>li {
+	display: block;
+
+	/* flex: 0 0 auto; */
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+}
+
+#cp-title-content {
+	/* flex: 1 1 auto; */
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+}
+
+#cp-title-fade {
+	/* flex: 0 0 auto; */
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+}
+
+#cp-social {
+	/* display: flex; */
+	display: -webkit-box;
+	display: -moz-box;
+
+	/* flex-direciton: row; */
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+
+	/* align-items: center; */
+	-webkit-box-align: center;
+	-moz-box-align: center;
+}
+
+@media (max-width: 800px) {
+	#ly-navigation>.ly-element:last-child {
+		margin-left: 0px;
+
+		/* flex: 1 1 auto; */
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+	}
+
+	#ly-title article {
+		/* flex-direction: column; */
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+	}
+
+	#cp-menu {
+		visibility: hidden;
+		height: 0px;
+		overflow-y: hidden;
+		overflow-x: hidden;
+
+		/* flex-direction: column; */
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+	}
+
+	#cp-menu.st-active {
+		visibility: visible;
+
+		height: 250px;
+	}
+}

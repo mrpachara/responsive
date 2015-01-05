@@ -5,14 +5,15 @@
 		<meta charset="UTF-8" />
 		<title>A Web</title>
 
-		<script type="text/javascript" src="js/lib/modernizr.js"></script>
+		<script type="text/javascript" src="js/lib/modernizr.custom.93975.js"></script>
 		<script type="text/javascript" src="js/lib/jquery-2.1.1.js"></script>
 		<script type="text/javascript" src="js/lib/angular.js"></script>
 		<script type="text/javascript" src="js/autosMart.js"></script>
 
+		<link rel="stylesheet" type="text/css" href="css/layout.css" />
+
 		<script type="text/javascript" src="js/layout.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="css/layout.css" />
 		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<link rel="stylesheet" type="text/css" href="css/theme.css" />
 	</head>
@@ -27,7 +28,7 @@
 					<button type="button" value="cp-menu" class="cmd-toggle">&equiv;</button>
 				</div>
 				<ul id="cp-menu" data-ng-controller="MenuController">
-					<li data-ng-repeat="menu in menus" class="cp-menu-item">
+					<li data-ng-repeat="menu in menus">
 						<a href="{{contentPath + menu.uri}}" data-show-title="{{menu.showTitle}}" data-ng-bind="menu.content"></a>
 					</li>
 				</ul>
@@ -36,12 +37,40 @@
 		<div id="ly-title">
 			<article>
 				<div id="cp-title-content">
+					<style type="text/css" scoped="scoped">
+#cp-title-content p {
+	font-size: large;
+	height: 7em;
+}
+
+html.flexboxlegacy #cp-title-content p {
+	display: -webkit-box;
+	display: -moz-box;
+
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+}
+
+html.flexbox #cp-title-content p {
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-direciton: column;
+	flex-direction: column;
+
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+					</style>
 					<h2>Know where're your assets, excellent option for your<br />customer  <span style="font-size: x-large;">&ldquo;</span>minimize invest with great return<span style="font-size: x-large;">&rdquo;</span></h2>
-					<p style="display: flex; flex-direction: column; font-size: large; height: 7em; justify-content: space-between;">
-						<span style="padding-left: 2em;"><span style="font-size: x-large;">&ldquo;</span>Pay as your drive<span style="font-size: x-large;">&rdquo;</span></span>
-						<span style="padding-left: 4em;"><span style="font-size: x-large;">&ldquo;</span>Buy here pay here<span style="font-size: x-large;">&rdquo;</span></span>
-						<span style="padding-left: 6em;"><span style="font-size: x-large;">&ldquo;</span>Retail floor planning<span style="font-size: x-large;">&rdquo;</span></span>
-						<span style="padding-left: 8em;"><span style="font-size: x-large;">&ldquo;</span>Simply install<span style="font-size: x-large;">&rdquo;</span></span>
+					<p>
+						<span style="display: block; padding-left: 2em;"><span style="font-size: x-large;">&ldquo;</span>Pay as your drive<span style="font-size: x-large;">&rdquo;</span></span>
+						<span style="display: block; padding-left: 4em;"><span style="font-size: x-large;">&ldquo;</span>Buy here pay here<span style="font-size: x-large;">&rdquo;</span></span>
+						<span style="display: block; padding-left: 6em;"><span style="font-size: x-large;">&ldquo;</span>Retail floor planning<span style="font-size: x-large;">&rdquo;</span></span>
+						<span style="display: block; padding-left: 8em;"><span style="font-size: x-large;">&ldquo;</span>Simply install<span style="font-size: x-large;">&rdquo;</span></span>
 					</p>
 				</div>
 			</article>

@@ -57,14 +57,12 @@ var autosMart = angular.module('AutosMart', []);
 			$html.removeClass('st-overlap');
 
 			$cpMenu.children().removeClass('st-active');
-			$this.closest('.cp-menu-item').addClass('st-active');
+			$this.closest('li').addClass('st-active');
 
 			if($this.data('showTitle')){
 				$html.addClass('st-show-title');
 			} else{
 				$html.removeClass('st-show-title');
-				$('#ly-title').removeAttr('style');
-				$('#cp-title-content').removeAttr('style');
 			}
 
 			if(typeof ev.originalEvent != 'undefined') history.pushState(null, $this.text(), '#!' + $this.attr('href'));
@@ -85,7 +83,8 @@ var autosMart = angular.module('AutosMart', []);
 					$('body>*', doc).each(function(){
 						var newElement = document.importNode(this, true);
 						$lyContent.append(newElement);
-						$(window).animate({'scrollTop': 0}, 'slow');
+						layout.initFn();
+						$('html').animate({'scrollTop': 0}, 'slow');
 					});
 					/*
 					angular.element(document).injector().invoke(function($compile) {

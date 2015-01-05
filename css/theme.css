@@ -88,14 +88,14 @@ Component
 	color: inherit;
 }
 
-#cp-menu *.cp-menu-item {
+#cp-menu>li {
 	color: inherit;
 	font-weight: normal;
 	opacity: 0.75;
 }
 
-#cp-menu *.cp-menu-item:hover,
-#cp-menu *.cp-menu-item.st-active {
+#cp-menu>li:hover,
+#cp-menu>li.st-active {
 	opacity: 1.00;
 	text-shadow: 0px 0px 1px;
 }
@@ -152,8 +152,12 @@ Animation
 	transition: visibility 0.2s linear, height 0.2s linear;
 }
 
+#cp-menu>li {
+	transition: color 0.2s linear, opacity 0.2s linear, text-shadow 0.2s linear;
+}
+
 #cp-menu a {
-	transition: color 0.2s linear, opacity 0.2s linear;
+	transition: color 0.2s linear;
 }
 
 #cp-title-content {
