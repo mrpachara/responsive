@@ -13,7 +13,36 @@
 	text-align: center;
 }
 
-#page-home>div {
+html.no-flexbox.no-flexboxtweener.no-flexboxlegacy #page-home>div {
+	display: block;
+}
+html.no-flexbox.no-flexboxtweener.no-flexboxlegacy #page-home>div>* {
+	vertical-align: top;
+	height: 20em;
+}
+
+html.flexboxlegacy #page-home>div {
+	display: -webkit-box;
+	display: -moz-box;
+
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+
+	-webkit-box-lines: multiple;
+	-moz-box-lines: multiple;
+}
+
+html.flexboxtweener #page-home>div {
+	display: -ms-flexbox;
+	-ms-flex-flow: row wrap;
+
+	-ms-flex-pack: justify;
+}
+
+html.flexbox #page-home>div {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -21,6 +50,7 @@
 }
 
 #page-home article {
+	display: inline-block;
 	width: 12em;
 	margin: 0px 0.5em 1em 0.5em;
 	padding: 0.5em;
