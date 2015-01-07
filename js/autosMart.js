@@ -84,7 +84,8 @@ var autosMart = angular.module('AutosMart', []);
 						var newElement = document.importNode(this, true);
 						$lyContent.append(newElement);
 						layout.initFn();
-						$('html').animate({'scrollTop': 0}, 'slow');
+
+						$('html, body').animate({'scrollTop': 0}, 'slow');
 					});
 					/*
 					angular.element(document).injector().invoke(function($compile) {
