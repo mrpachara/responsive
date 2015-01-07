@@ -2,7 +2,7 @@ var layout = {
 	'type': 'noflexbox'
 };
 
-(function(document, $){
+(function(window, document, $){
 	'use strict';
 
 	var layoutURI = 'css/layout';
@@ -117,4 +117,4 @@ var layout = {
 			}, 500);
 		});
 	});
-})(window.document, window.jQuery);
+})(this, this.document, this.jQuery);

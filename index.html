@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="js/lib/modernizr.custom.93975.js"></script>
 		<script type="text/javascript" src="js/lib/jquery-2.1.1.js"></script>
 		<script type="text/javascript" src="js/lib/angular.js"></script>
+		<script type="text/javascript" src="js/fallbacksupport.js"></script>
 		<script type="text/javascript" src="js/autosMart.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/layout.css" />
@@ -52,6 +53,14 @@ html.flexboxlegacy #cp-title-content p {
 
 	-webkit-box-pack: justify;
 	-moz-box-pack: justify;
+}
+
+html.flexboxtweener #cp-title-content p {
+	display: -ms-flexbox;
+
+	-ms-flex-flow: column;
+
+	-ms-flex-pack: justify;
 }
 
 html.flexbox #cp-title-content p {

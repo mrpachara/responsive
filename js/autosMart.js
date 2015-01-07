@@ -1,6 +1,6 @@
 var autosMart = angular.module('AutosMart', []);
 
-(function(document, $, angular, autosMart){
+(function(window, document, $, angular, autosMart){
 	'use strict';
 
 	var commandData = {
@@ -8,6 +8,7 @@ var autosMart = angular.module('AutosMart', []);
 	};
 
 	var loadContentFn = function(){
+		var location = window.history.location || window.location;
 		var link = location.hash.substring(2);
 		var $a = $('#cp-menu a[href="' + link + '"]');
 		if($a.length === 0) $a = $('#cp-menu a[href]');
@@ -72,7 +73,9 @@ var autosMart = angular.module('AutosMart', []);
 				'cache': false
 			})
 				.done(function(data){
-					var doc = (new DOMParser()).parseFromString(data, "text/html");
+					//var doc = (new DOMParser()).parseFromString(data, "text/html");
+					/* USE: content type 'application/xml' for support IE9 */
+					var doc = (new DOMParser()).parseFromString(data, "application/xml");
 					$lyContent.empty();
 					var $script = $('script', doc);
 					$script.each(function(){
@@ -98,4 +101,4 @@ var autosMart = angular.module('AutosMart', []);
 			//ev.preventDefault();
 		});
 	});
-})(window.document, window.jQuery, window.angular, autosMart);
+})(this, this.document, this.jQuery, this.angular, autosMart);
